@@ -1,0 +1,27 @@
+<LibraryContentPage>
+    on_enter:root.on_start()
+    MDBoxLayout:
+        orientation: 'vertical'
+        size: root.width, root.height
+        
+        MDTopAppBar:
+            id: lib_content_appbar
+            title: root.title
+            left_action_items:[["arrow-left",lambda x: root.on_back()],]
+        
+        MDScrollView:
+            size:self.size
+            MDBoxLayout:
+                size_hint_y:None
+                height: self.minimum_height
+                width: self.minimum_width
+                orientation:"vertical"
+                MDLabel:
+                    id : lib_item_dec
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                    text: root.title
+                    markup:True
+            
+        MDTopAppBar:
+        

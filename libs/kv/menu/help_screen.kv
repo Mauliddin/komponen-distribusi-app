@@ -1,0 +1,49 @@
+
+<HelpPage>:
+
+    MDBoxLayout:
+        orientation: 'vertical'
+        size: root.width, root.height
+
+        MDTopAppBar:
+            title: "Help"
+            left_action_items:[["arrow-left",lambda x: app.call("home_page","right")],]
+
+        MDBoxLayout:
+            orientation:"vertical"
+            pos_hint: {'center_x': .5, 'center_y':.5 }
+            MDLabel:
+                canvas.before:
+                    Color:
+                        rgba: hex('#854836')
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+                text: "Cara Penggunaaan"
+                font_style: "H6"
+                halign: "center"
+                size_hint_y: .3
+            MDLabel:
+                text: "1. Tekan Tombol Bergambar Kamera pada halaman utama"
+                halign: "left"
+                font_style: "Body1"
+                padding: [50,0,0,0]
+
+            MDFloatLayout:    
+                Image:
+                    source: "data/pic/help/sc-camera-button.png"
+                    pos_hint: {'x': 0.3-0.5,'center_y': 0.9}
+
+            MDLabel:
+                text: "2. Arahkan Kamera ke Marker yang telah disediakan"
+                halign: "left"
+                font_style: "Body1"
+                padding: [50,0,0,0]
+            
+            MDLabel:
+                text: "3. Gambar Augmented Reality akan muncul di atas marker"
+                halign: "left"
+                font_style: "Body1"
+                padding: [50,0,0,0]
+
+        MDTopAppBar:

@@ -1,0 +1,124 @@
+
+<LibraryScreen>:
+
+    MDBoxLayout:
+        orientation: 'vertical'
+        size: root.width, root.height
+        MDTopAppBar:
+            title: root.title
+            left_action_items:[["arrow-left",lambda x: app.call("home_page","right")],]
+
+        MDScrollView:
+            size:self.size
+            MDList:
+                id:item_list
+                OneLineAvatarIconListItem:
+                    id: item_list_penghantar
+                    text:"Penghantar"
+                    on_press: app.call("item_penghantar")
+                OneLineAvatarIconListItem:
+                    id: item_list_kabel
+                    text:"Kabel"
+                    on_press:app.call("item_kabel")
+                OneLineAvatarIconListItem:
+                    id: item_list_kawat
+                    text:"Kawat"
+                    on_press:app.call("item_kawat")
+                OneLineAvatarIconListItem:
+                    id: item_list_kawat_aluminium
+                    text:"Kawat Aluminium"
+                    on_press: app.call("item_kawat_aluminium")
+                OneLineAvatarIconListItem:
+                    id: item_list_kawat_tembaga
+                    text:"Kawat Tembaga"
+                    on_press: app.call("item_kawat_tembaga")
+                OneLineAvatarIconListItem:
+                    id: item_list_tiang_penyangga
+                    text:"Tiang Penyangga"
+                    on_press:app.call("item_tiang_penyangga")
+                OneLineAvatarIconListItem:
+                    id: item_list_tiang_kayu
+                    text:"Tiang Kayu"
+                    on_press:app.call("item_tiang_kayu")
+                OneLineAvatarIconListItem:
+                    id: item_list_tiang_baja
+                    text:"Tiang Baja"
+                    on_press:app.call("item_tiang_baja")
+                OneLineAvatarIconListItem:
+                    id: item_list_tiang_beton
+                    text:"Tiang Beton"
+                    on_press:app.call("item_tiang_beton")
+                OneLineAvatarIconListItem:
+                    id: item_list_fuse_cut_out
+                    text:"Fuse Cut Out"
+                    on_press:app.call("item_fuse_cut_out")
+                OneLineAvatarIconListItem:
+                    id: item_list_lightning_arrester
+                    text:"Lightning Arrester"
+                    on_press:app.call("item_lightning_arrester")
+                OneLineAvatarIconListItem:
+                    id: item_list_lightning_arrester_ekspulsi
+                    text:"Lightning Arrester Ekspulsi"
+                    on_press:app.call("item_lightning_arrester_ekspulsi")
+                OneLineAvatarIconListItem:
+                    id: item_list_lightning_arrester_katup
+                    text:"Lightning Arrester Katup"
+                    on_press:app.call("item_lightning_arrester_katup")
+                OneLineAvatarIconListItem:
+                    id: item_list_isolator
+                    text:"Isolator"
+                    on_press:app.call("item_isolator")
+                OneLineAvatarIconListItem:
+                    id: item_list_isolator_pin
+                    text:"Isolator Pin"
+                    on_press:app.call("item_isolator_pin")
+                OneLineAvatarIconListItem:
+                    id: item_list_isolator_post
+                    text:"Isolator Post"
+                    on_press:app.call("item_isolator_post")
+                OneLineAvatarIconListItem:
+                    id: item_list_isolator_spool
+                    text:"Isolator Spool"
+                    on_press:app.call("item_isolator_spool")
+                OneLineAvatarIconListItem:
+                    id: item_list_isolator_suspension
+                    text:"Isolator Suspension"
+                    on_press:app.call("item_isolator_suspension")
+                OneLineAvatarIconListItem:
+                    id: item_list_gardu_distribusi
+                    text:"Gardu Distribusi"
+                    on_press:app.call("item_gardu_distribusi")
+                OneLineAvatarIconListItem:
+                    id: item_list_gardu_portal
+                    text:"Gardu Portal"
+                    on_press:app.call("item_gardu_portal")
+                OneLineAvatarIconListItem:
+                    id: item_list_gardu_cantol
+                    text:"Gardu Cantol" 
+                    on_press:app.call("item_gardu_cantol")                   
+                OneLineAvatarIconListItem:
+                    id: item_list_gardu_kios
+                    text:"Gardu Kios"
+                    on_press:app.call("item_gardu_kios")
+                OneLineAvatarIconListItem:
+                    id: item_list_trafo_distribusi
+                    text:"Transformator Distribusi"
+                    on_press:app.call("item_transformator_distribusi")
+                OneLineAvatarIconListItem:
+                    id: item_list_trafo_satu_fasa
+                    text:"Transformator Satu Fasa"
+                    on_press:app.call("item_transformator_satu_fasa")
+                OneLineAvatarIconListItem:
+                    id: item_list_trafo_tiga_fasa
+                    text:"Transformator Tiga Fasa"
+                    on_press:app.call("item_transformator_tiga_fasa")
+                OneLineAvatarIconListItem:
+                    id: item_list_trafo_konvensional
+                    text:"Transformator Konvensional"
+                    on_press:app.call("item_transformator_konvensional")
+                OneLineAvatarIconListItem:
+                    id: item_list_trafo_csp
+                    text:"Transformator CSP"
+                    on_press:app.call("item_transformator_csp")
+        MDBottomAppBar:
+            MDTopAppBar:

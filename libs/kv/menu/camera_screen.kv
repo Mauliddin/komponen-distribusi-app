@@ -1,0 +1,24 @@
+<CameraPage>:
+    on_pre_enter: self.on_start()
+    on_leave: self.clear_camera()
+    MDBoxLayout:
+        orientation: 'vertical'
+        size: root.width, root.height
+        
+        MDTopAppBar:
+            title: root.title
+            left_action_items:[["arrow-left",lambda x: root.on_back()],]
+
+        MDBoxLayout:
+            id: box_camera
+            orientation:"vertical"
+            size: root.width, root.height
+            
+        MDBottomAppBar:
+            id: btm
+            spacing:0
+            MDTopAppBar:
+                icon: "camera"
+                type:"bottom"
+                mode:"center"
+                on_action_button: root.klik()

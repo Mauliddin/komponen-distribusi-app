@@ -1,0 +1,27 @@
+0;penghantar;1-Penghantar.png
+1;kabel;2-kabel.png
+2;kawat;3-kawat.png
+3;kawat aluminium;4-kawat aluminium.png
+4;kawat tembaga;5-kawat tembaga.png
+5;tiang penyangga;6-Tiang Penyangga.png
+6;tiang kayu;7-tiang kayu.png
+7;tiang baja;8-tiang baja.png
+8;tiang beton;9-tiang beton.png
+9;fuse cut out;10-fuse cut out.png
+10;lightning arrester;11-Lightning arrester.png
+11;lightning arrester eksplusi;12-Lightning arrester eksplusi.png
+12;lightning arrester katup;13-Lightning arrester katup.png
+13;isolator;14-insulator.png
+14;isolator pin;15-pin type insulator.png
+15;isolator post;16-post type insulator.png
+16;isolator spool;17-spool type insulator (isolator jenis cincin).png
+17;isolator suspension;18-suspension type  insulator.png
+18;gardu distribusi;19-Gardu Distribusi.png
+19;gardu portal;20-gardu portal.png
+20;gardu cantol;21-Gardu cantol 3 fasa.png
+21;gardu kios;22-gardu kios.png
+22;transformator distribusi;23-Transformator Distribusi.png
+23;transformator satu fasa;24-Transformator 1 fasa.png
+24;transformator tiga Fasa;25-Transformator 3 Fasa.png
+25;transformator konvensional;26-Transformator konvensional.png
+26;transformator csp;27-Transformator csp.png

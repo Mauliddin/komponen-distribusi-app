@@ -1,0 +1,43 @@
+
+<DownloadMarkers>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        size: root.width, root.height
+        
+        MDTopAppBar:
+            title: "Mendownload markers"
+            left_action_items:[["arrow-left",lambda x: app.call("home_page","right")],]
+
+        MDFloatLayout:
+            MDBoxLayout:
+                orientation: 'vertical'
+                pos_hint: {'center_x': 0.5,'center_y': 0.5}
+                size_hint: .6, .3
+                MDFillRoundFlatIconButton:
+                    icon: "download"
+                    text:"download marker"
+                    pos_hint: {'center_x': 0.5,'center_y': 0.5}
+                    on_release:
+                        import webbrowser
+                        #link berisi file marker
+                        webbrowser.open("www.google.com")
+                MDLabel:
+                    text: "atau"
+                    halign: "center"
+                    font_style: "Body1"
+
+                MDLabel:
+                    text: "Anda dapat menggunakan Link di bawah ini"
+                    halign: "center"
+                    font_style: "Body1"
+                MDLabel:
+                    id: link_marker
+                    text: "[ref=link]link[/ref]"
+                    markup: True
+                    halign: "center"
+                    font_style: "Body1"
+                    on_ref_press:
+                        Clipboard.copy("link")
+                        #buatlah alert menunjukan link telah disalin:
+        MDTopAppBar:
+            

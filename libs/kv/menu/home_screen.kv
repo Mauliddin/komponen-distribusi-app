@@ -1,0 +1,59 @@
+<HomePage>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        size: root.width, root.height
+
+        MDTopAppBar :
+            title: "Aplikasi AR"
+
+        MDBoxLayout:
+            orientation: 'vertical'
+            padding: 20
+            spacing: 20
+            MDRectangleFlatIconButton:
+                icon: "book"
+                text:"Library"
+                text_color: "white"
+                icon_color: "white"
+                md_bg_color:"purple"
+                size_hint: .5,.1
+                pos_hint: {'center_x': 0.5,'center_y': 0.5}
+                on_press: app.call("library_page")
+            MDRectangleFlatIconButton:
+                icon: "download"
+                text:"Download Marker"
+                text_color: "white"
+                icon_color: "white"
+                md_bg_color:"purple"
+                size_hint: .5,.1
+                pos_hint: {'center_x': 0.5,'center_y': 0.5}
+                on_release: app.call("download_marker")
+            MDRectangleFlatIconButton:
+                icon: "help"
+                text:"Help"
+                text_color: "white"
+                icon_color: "white"
+                md_bg_color:"purple"
+                size_hint: .5,.1
+                pos_hint: {'center_x': 0.5,'center_y': 0.5}
+                on_press: app.call("help_page")
+
+            MDRectangleFlatIconButton:
+                icon: "information"
+                text:"About"
+                size_hint: .5,.1
+                text_color: "white"
+                icon_color: "white"
+                md_bg_color:"purple"
+                pos_hint: {'center_x': 0.5,'center_y': 0.5}
+                on_press: app.call("about_page")
+
+
+        MDBottomAppBar:
+            spacing:0
+            MDTopAppBar:
+                icon: "camera"
+                type:"bottom"
+                mode:"center"
+                on_action_button: app.call("camera_page")
+      

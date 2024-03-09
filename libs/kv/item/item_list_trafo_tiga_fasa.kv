@@ -1,0 +1,33 @@
+<ItemTrafoTigaFasa>
+    
+    MDBoxLayout:
+        orientation: 'vertical'
+        size: root.width, root.height
+        
+        MDTopAppBar:
+            title: "Transformator Tiga Fasa"
+            left_action_items:[["arrow-left",lambda x: root.on_back()],]
+        
+        MDScrollView:
+            size:self.size
+            MDBoxLayout:
+                size_hint_y:None
+                height: self.minimum_height
+                width: self.minimum_width
+                orientation:"vertical"
+                padding: [0, 10, 0, 0]
+                Image:
+                    source:root.image1
+                    size_hint_y: None
+                    height: 200
+                    
+                MDLabel:
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                    text: root.text1
+                    font_style: "Body1"
+                    padding: dp(10)
+                    markup:True
+            
+        MDTopAppBar:
+        
