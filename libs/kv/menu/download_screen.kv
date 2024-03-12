@@ -30,14 +30,10 @@
                     text: "Anda dapat menggunakan Link di bawah ini"
                     halign: "center"
                     font_style: "Body1"
-                MDLabel:
-                    id: link_marker
-                    text: "[ref=link]link[/ref]"
-                    markup: True
-                    halign: "center"
-                    font_style: "Body1"
-                    on_ref_press:
-                        Clipboard.copy("link")
-                        #buatlah alert menunjukan link telah disalin:
+
+                MDTextField:
+                    text:"ini adalah link"
+                    mode:"rectangle"
+                    readonly: True
         MDTopAppBar:
             

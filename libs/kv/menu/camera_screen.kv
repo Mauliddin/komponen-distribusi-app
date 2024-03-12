@@ -1,93 +1,24 @@
-
-<AboutPage>:
+<CameraPage>:
+    on_pre_enter: self.on_start()
+    on_leave: self.clear_camera()
     MDBoxLayout:
         orientation: 'vertical'
         size: root.width, root.height
-        spacing: 0
+        
         MDTopAppBar:
-            title: "Tentang"
-            left_action_items:[["arrow-left",lambda x: app.call("home_page","right")],]
+            title: root.title
+            left_action_items:[["arrow-left",lambda x: root.on_back()],]
 
         MDBoxLayout:
-            orientation: 'vertical'
-            MDLabel:
-                canvas.before:
-                    Color:
-                        rgba: hex("#854836")
-                    Rectangle:
-                        pos:self.pos
-                        size: self.size
-                text: 'Tentang Aplikasi'
-                font_style: 'H6'
-                halign:"center"
-                size_hint_y: .2
-            MDLabel:
-                text: root.tentang
-                font_style: 'Body1'
-                halign:"justify"
-                padding: [10,0,10,0]
-                size_hint_y: .4
-            MDLabel:
-                canvas.before:
-                    Color:
-                        rgba: hex("#854836")
-                    Rectangle:
-                        pos:self.pos
-                        size: self.size
-                text: 'Developer'
-                font_style: 'H6'
-                halign:"center"
-                size_hint_y: .2  
-
-            MDLabel:
-                text: root.developer
-                halign:"center"
-                font_style: 'Body1'
-                padding: 40
-
-            MDLabel:
-                canvas.before:
-                    Color:
-                        rgba: hex("#854836")
-                    Rectangle:
-                        pos:self.pos
-                        size: self.size
-                text: 'Contact Me'
-                font_style: 'H6'
-                halign:"center"
-                size_hint_y: .2
-            MDBoxLayout:
-                orientation: 'vertical'
-                padding: [0,0,0,20]
-                spacing: 10
-                MDRectangleFlatIconButton:
-                    icon: "instagram"
-                    text: "@mauliddinnurm"
-                    theme_text_color: "Custom"
-                    text_color: "white"
-                    line_color: "black"
-                    theme_icon_color: "Custom"
-                    icon_color: "white"
-                    pos_hint: {'center_x':0.5,'y': 1}
-                MDRectangleFlatIconButton:
-                    icon: "linkedin"
-                    text: "Mauliddin Nur Muhammad"
-                    theme_text_color: "Custom"
-                    text_color: "white"
-                    line_color: "black"
-                    theme_icon_color: "Custom"
-                    icon_color: "white"
-                    pos_hint: {'center_x':0.5,'center_y': .6}
-                MDRectangleFlatIconButton:
-                    icon: "github"
-                    text: "Mauliddin"
-                    theme_text_color: "Custom"
-                    text_color: "white"
-                    line_color: "black"
-                    theme_icon_color: "Custom"
-                    icon_color: "white"
-                    pos_hint: {'center_x':0.5,'center_y': .6}
-                
-
-        MDTopAppBar:
-
+            id: box_camera
+            orientation:"vertical"
+            size: root.width, root.height
+            
+        MDBottomAppBar:
+            id: btm
+            spacing:0
+            MDTopAppBar:
+                icon: "camera"
+                type:"bottom"
+                mode:"center"
+                on_action_button: root.klik()
